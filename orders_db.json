@@ -1,0 +1,158 @@
+[
+  {
+    "orderId": "BP-ORD-56332",
+    "reference": "BP-TX-1792168270802-609",
+    "provider": "Paystack",
+    "status": "Paid",
+    "customer": {
+      "name": "Engr. Chidi Okafor",
+      "email": "chidi@okafor-engineering.ng",
+      "phone": "+2348037704936",
+      "address": "12 Innovation Way, Victoria Island",
+      "city": "Lagos",
+      "state": "Lagos State",
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "sensor-ds18b20",
+        "name": "DS18B20 Temp Probe",
+        "price": 14000,
+        "quantity": 2
+      }
+    ],
+    "totalAmount": 28000,
+    "currency": "NGN",
+    "virtualAccount": {
+      "bankName": "Titan Trust Bank",
+      "bankCode": "102",
+      "accountNumber": "9993668591",
+      "accountName": "BARGAINPOWER / ENGR CHIDI OKAFOR",
+      "amount": 28000,
+      "currency": "NGN",
+      "expiresAt": "2026-10-16T17:01:10.802Z"
+    },
+    "createdAt": "2026-10-16T16:31:10.802Z",
+    "paidAt": "2026-10-16T16:31:15.802Z",
+    "receipt": {
+      "receiptNumber": "REC-SIM-56332-MVB6PVTM",
+      "transactionRef": "BP-TX-1792168270802-609",
+      "paymentMethod": "Dynamic Dedicated Virtual Account (Paystack Bank Transfer)",
+      "bankName": "Titan Trust Bank",
+      "virtualAccount": "9993668591",
+      "amountPaid": 28000,
+      "currency": "NGN",
+      "customerName": "Engr. Chidi Okafor",
+      "customerEmail": "chidi@okafor-engineering.ng",
+      "customerPhone": "+2348037704936",
+      "deliveryAddress": "12 Innovation Way, Victoria Island, Lagos, Lagos State",
+      "verifiedAt": "2026-10-16T16:31:15.802Z",
+      "verificationSource": "Paystack Server-to-Server Webhook (charge.success Verified)",
+      "authSignature": "AUTH_651B61C065F04BF6"
+    },
+    "shipping": {
+      "status": "Pending Dispatch",
+      "carrier": "GIG Logistics / Speedaf Express",
+      "trackingNumber": null,
+      "dispatchDate": null,
+      "estimatedDelivery": "2 - 3 Business Days",
+      "notes": "Handle automation components with ESD static caution.",
+      "destination": "12 Innovation Way, Victoria Island, Lagos, Lagos State",
+      "items": [
+        {
+          "id": "sensor-ds18b20",
+          "name": "DS18B20 Temp Probe",
+          "price": 14000,
+          "quantity": 2
+        }
+      ],
+      "updatedAt": "2026-10-16T16:31:15.802Z"
+    }
+  },
+  {
+    "orderId": "BP-ORD-88214",
+    "reference": "BP-TX-1741539201-921",
+    "provider": "Paystack",
+    "status": "Paid",
+    "customer": {
+      "name": "Chief Adebayo Alabi",
+      "email": "adebayo.alabi@lekkiestates.ng",
+      "phone": "+2348023456789",
+      "address": "Plot 14, Admiralty Way, Lekki Phase 1",
+      "city": "Lekki",
+      "state": "Lagos State",
+      "notes": "Please gate-pass call upon arrival"
+    },
+    "items": [
+      {
+        "id": "sensor-ds18b20",
+        "name": "DS18B20 Waterproof Stainless Steel Digital Temperature Probe",
+        "category": "Environmental & Temperature",
+        "price": 18500,
+        "quantity": 2,
+        "image": "/src/assets/images/contactors_3pole_ac_dc_1790998707179.webp"
+      },
+      {
+        "id": "contactor-3p-40a",
+        "name": "3-Pole 40A AC Magnetic Contactor",
+        "category": "Heavy Industrial Switching",
+        "price": 52000,
+        "quantity": 1,
+        "image": "/src/assets/images/contactors_3pole_ac_dc_1790998707179.webp"
+      }
+    ],
+    "totalAmount": 89000,
+    "currency": "NGN",
+    "virtualAccount": {
+      "bankName": "Wema Bank (Paystack Titan)",
+      "bankCode": "035",
+      "accountNumber": "9948210394",
+      "accountName": "BARGAINPOWER / ADEBAYO ALABI",
+      "amount": 89000,
+      "currency": "NGN",
+      "expiresAt": "2026-10-16T17:14:03.557Z"
+    },
+    "createdAt": "2026-10-16T11:14:03.558Z",
+    "paidAt": "2026-10-16T12:14:03.558Z",
+    "receipt": {
+      "receiptNumber": "REC-BP-99214",
+      "transactionRef": "BP-TX-1741539201-921",
+      "paymentMethod": "Dynamic Dedicated Virtual Account (Bank Transfer)",
+      "bankName": "Wema Bank (Paystack Titan)",
+      "virtualAccount": "9948210394",
+      "amountPaid": 89000,
+      "currency": "NGN",
+      "customerName": "Chief Adebayo Alabi",
+      "customerEmail": "adebayo.alabi@lekkiestates.ng",
+      "customerPhone": "+2348023456789",
+      "deliveryAddress": "Plot 14, Admiralty Way, Lekki Phase 1, Lagos State",
+      "verifiedAt": "2026-10-16T12:14:03.558Z",
+      "verificationSource": "Paystack Webhook Server-to-Server (charge.success)",
+      "authSignature": "SEC_HMAC_78491A9C44F0"
+    },
+    "shipping": {
+      "status": "In Transit",
+      "carrier": "GIG Logistics Express Priority",
+      "trackingNumber": "GIG-LAG-99281-NG",
+      "dispatchDate": "2026-10-16T14:14:03.558Z",
+      "estimatedDelivery": "Tomorrow, 2:00 PM",
+      "notes": "Fragile electrical coils enclosed. Handled with static-shield packaging.",
+      "destination": "Plot 14, Admiralty Way, Lekki Phase 1, Lagos State",
+      "items": [
+        {
+          "id": "sensor-ds18b20",
+          "name": "DS18B20 Waterproof Stainless Steel Digital Temperature Probe",
+          "price": 18500,
+          "quantity": 2
+        },
+        {
+          "id": "contactor-3p-40a",
+          "name": "3-Pole 40A AC Magnetic Contactor",
+          "price": 52000,
+          "quantity": 1
+        }
+      ],
+      "updatedAt": "2026-10-16T14:14:03.558Z"
+    }
+  }
+]

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | BARGAINPOWER & TECHNOLOGY</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #071326;
+      color: #E2E8F0;
+      font-family: 'Inter', sans-serif;
+    }
+    .admin-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+    .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid #1E293B;
+      margin-bottom: 1.5rem;
+    }
+    .admin-card {
+      background-color: #0B192E;
+      border: 1px solid #1E293B;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 900px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+    .badge-verified {
+      background-color: #064E3B;
+      color: #34D399;
+      font-size: 0.6875rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+    .badge-urgent {
+      background-color: #831843;
+      color: #F472B6;
+      font-size: 0.6875rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 700;
+      animation: pulse 2s infinite;
+    }
+    .btn-action {
+      background-color: #008080;
+      color: #FFFFFF;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-action:hover { background-color: #006666; }
+    .btn-reply-chat {
+      background-color: #FF007F;
+      color: #FFFFFF;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-reply-chat:hover { background-color: #E6006F; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8125rem;
+    }
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid #1E293B;
+    }
+    th {
+      color: #94A3B8;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      background-color: #050D1A;
+      border: 1px solid #334155;
+      border-radius: 6px;
+      color: #FFFFFF;
+      font-size: 0.8125rem;
+      margin-top: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="admin-container">
+    <!-- Header -->
+    <header class="admin-header">
+      <div>
+        <div style="font-size: 0.75rem; color: #2DD4BF; font-weight: 700; text-transform: uppercase;">
+          Live Operation Console
+        </div>
+        <h1 style="font-size: 1.5rem; font-weight: 800; margin: 0; color: #FFFFFF;">
+          BARGAINPOWER & TECHNOLOGY — Admin Control Panel
+        </h1>
+      </div>
+      <div>
+        <a href="/" class="btn-action" style="text-decoration: none; display: inline-block;">
+          ← Return to Public Website
+        </a>
+      </div>
+    </header>
+
+    <!-- Top Metrics Overview -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+      <div class="admin-card" style="margin-bottom: 0;">
+        <span style="font-size: 0.75rem; color: #94A3B8;">Total Visitors Logged</span>
+        <div id="stat-total-visitors" style="font-size: 1.75rem; font-weight: 900; color: #2DD4BF; font-family: monospace;">
+          Loading...
+        </div>
+      </div>
+      <div class="admin-card" style="margin-bottom: 0;">
+        <span style="font-size: 0.75rem; color: #94A3B8;">Public Form Inquiries</span>
+        <div id="stat-total-inquiries" style="font-size: 1.75rem; font-weight: 900; color: #38BDF8; font-family: monospace;">
+          Loading...
+        </div>
+      </div>
+      <div class="admin-card" style="margin-bottom: 0;">
+        <span style="font-size: 0.75rem; color: #94A3B8;">Urgent Chat Handovers</span>
+        <div id="stat-urgent-handovers" style="font-size: 1.75rem; font-weight: 900; color: #FF007F; font-family: monospace;">
+          Loading...
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Queue Panels: Public Form Submissions & Urgent Live Chat Handover -->
+    <div class="grid-2">
+      <!-- Panel 1: Public Form Inquiries -->
+      <div class="admin-card">
+        <h2 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: #FFFFFF;">
+          Public Form Submissions & Email Replies
+        </h2>
+        <p style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 1rem;">
+          Verified human submissions from the public website with anti-robot checks.
+        </p>
+
+        <div id="admin-inquiries-list" style="max-height: 400px; overflow-y: auto;">
+          <!-- Dynamically populated from localStorage via admin.js -->
+        </div>
+      </div>
+
+      <!-- Panel 2: Live Chat Handover & Instant Chat Reply -->
+      <div class="admin-card">
+        <h2 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: #FFFFFF;">
+          Live Chat Handover & Instant Reply Engine
+        </h2>
+        <p style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 1rem;">
+          Clients waiting for human agent response. Replying here sends message instantly to visitor's screen.
+        </p>
+
+        <div id="admin-handovers-list" style="max-height: 280px; overflow-y: auto; margin-bottom: 1rem;">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- Chatbot Instant Reply Box -->
+        <div style="background-color: #050D1A; padding: 1rem; border-radius: 8px; border: 1px solid #1E293B;">
+          <label style="font-size: 0.75rem; font-weight: 700; color: #E2E8F0; display: block; margin-bottom: 0.5rem;">
+            Instant Chatbot Reply (Transmits to visitor's active chat window):
+          </label>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" id="admin-chat-reply-input" placeholder="Type immediate answer to the client...">
+            <button id="admin-chat-reply-btn" class="btn-reply-chat" style="white-space: nowrap;">
+              Send to Visitor
+            </button>
+          </div>
+          <div id="admin-chat-status" style="font-size: 0.75rem; color: #34D399; margin-top: 0.5rem; display: none;">
+            ✓ Message transmitted live to visitor chat tray!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visitors Log Table -->
+    <div class="admin-card">
+      <h2 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: #FFFFFF;">
+        Visitor Session Logs
+      </h2>
+      <p style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 1rem;">
+        Record of website visitors, devices, IP sessions, and accessed pages.
+      </p>
+
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Session IP</th>
+              <th>Hardware Device</th>
+              <th>Browser</th>
+              <th>Page Visited</th>
+              <th>Timestamp</th>
+            </tr>
+          </thead>
+          <tbody id="admin-visitors-table">
+            <!-- Dynamically populated -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CMS Control Center: Edit WhatsApp, Email, Pictures, and Text -->
+    <div class="admin-card">
+      <h2 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: #FFFFFF;">
+        Control Center: Dynamic Endpoints & Site Configuration
+      </h2>
+      <p style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 1rem;">
+        Update active WhatsApp number, helpdesk email, and social profiles dynamically across the site.
+      </p>
+
+      <form id="admin-cms-form">
+        <div class="grid-2" style="margin-bottom: 1rem;">
+          <div>
+            <label style="font-size: 0.75rem; font-weight: 600;">Active WhatsApp Phone Number:</label>
+            <input type="text" id="cms-whatsapp-input" value="+2348037704936">
+          </div>
+          <div>
+            <label style="font-size: 0.75rem; font-weight: 600;">Helpdesk Support Email:</label>
+            <input type="email" id="cms-email-input" value="biockhelpdesk@gmail.com">
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <label style="font-size: 0.75rem; font-weight: 600;">Company Title:</label>
+          <input type="text" id="cms-company-input" value="BARGAINPOWER & TECHNOLOGY">
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <label style="font-size: 0.75rem; font-weight: 600;">Top Announcement Information Bar:</label>
+          <input type="text" id="cms-announcement-input" value="Innovative Engineering: Home Automation, Contactors, EV Conversions & Aircraft Prototypes">
+        </div>
+
+        <button type="submit" class="btn-action" style="padding: 0.6rem 1.25rem;">
+          Save All System Endpoints
+        </button>
+        <span id="cms-save-status" style="font-size: 0.75rem; color: #34D399; margin-left: 1rem; display: none;">
+          ✓ Configuration saved to LocalStorage!
+        </span>
+      </form>
+    </div>
+  </div>
+
+  <script src="/admin.js"></script>
+</body>
+</html>

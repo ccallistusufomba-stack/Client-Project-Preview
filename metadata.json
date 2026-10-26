@@ -1,0 +1,6 @@
+{
+  "name": "BARGAINPOWER & TECHNOLOGY - Engineering, Automation & Electric Mobility",
+  "description": "BARGAINPOWER & TECHNOLOGY provides cutting-edge home automation, microcontrollers, contactors, circuit breakers, electric vehicles, electric aircraft prototypes, solar power customization, and smart agricultural irrigation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
